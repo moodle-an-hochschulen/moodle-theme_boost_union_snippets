@@ -7,8 +7,8 @@ The Community Snippets in this repository are available to be turned on and of i
 To make the snippet file work, there are required attributes that are needed to add at the top of the SCSS-file to work:
 
 - `Snippet Title`: Provide your own snippet title.
-- `Scope:`: Tag your scope. (optional)
-- `Goal`: Tag your goal. (optional)
+- `Scope:`: Tag your scope. (optional, see below)
+- `Goal`: Tag your goal. (optional, see below)
 - `Description:` Describe in a few sentence what the snippet does. (recommended)
 - `Creator:` Set the creator of the snippet to be shown in the CSS snippets table. (recommended)
 - `Usage note:` Add a usage note to be shown in the CSS snippets table. (optional)

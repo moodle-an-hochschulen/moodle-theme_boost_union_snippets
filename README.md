@@ -10,6 +10,7 @@ To make the snippet file work, there are required attributes that are needed to 
 - `Scope:`: Tag your scope. (optional)
 - `Goal`: Tag your goal. (optional)
 - `Description:` Describe in a few sentence what the snippet does. (recommended)
+- `Creator:` Set the creator of the snippet to be shown in the CSS snippets table. (recommended)
 
 #### List of Scopes:
 The theme provides the following standard Scopes:

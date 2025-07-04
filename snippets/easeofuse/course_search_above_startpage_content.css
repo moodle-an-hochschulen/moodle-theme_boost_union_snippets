@@ -1,0 +1,35 @@
+/**
+ * Snippet Title: Move course search box to top on startpage.
+ * Scope:         startpage
+ * Goal:          easeofuse
+ * Description:   The course search box on the start page is very important to many, but when the content of the start page course is very long it is positioned quite unprominent. This snippet alawys puts it on top.
+ * Creator:       André Menrath
+ * Tested on:     Moodle 4.4+
+ * Usage note:    The course search box has to be enabled in the frontpageloggedin site admin setting.
+ *
+ * @copyright     2025 University of Graz
+ * @author        André Menrath <andre.menrath@uni-graz.at>
+ * @license       http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+#page-site-index #region-main > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+/** The course search box */
+#page-site-index #region-main > div > div.box.py-3.d-flex.justify-content-center  {
+    order: 1;
+}
+
+/** The course content*/
+#page-site-index #region-main > div > div.course-content {
+    order: 2;
+}
+
+/** All other stuff */
+#page-site-index #region-main > div > * {
+    order: 3;
+}

@@ -31,7 +31,8 @@ These are attributes that are defined to be added at the top of the SCSS file:
 - `Description`: A few sentences which describe the snippet for humans
 - `Creator`: The creator of the snippet which will be shown in the snippet list in Boost Union
 - `Tested on`: A short information on which Moodle version and with which browser the snippet was tested
-- `Usage note`: An (optional) usage note to be shown in the snippet list in Boost Union
+- `Tracker issue`: (Optional) The Moodle tracker issue number (MDL-xxxxx) where the bug / glitch / goal which is solved by the SCSS snippet was reported upstream
+- `Usage note`: (Optional) A usage note to be shown in the snippet list in Boost Union
 
 #### List of scopes
 

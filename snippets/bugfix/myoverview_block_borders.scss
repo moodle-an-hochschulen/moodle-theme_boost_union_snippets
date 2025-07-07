@@ -1,0 +1,33 @@
+/**
+ * Snippet Title: Course overview block on Dashboard with proper borders
+ * Scope:         global
+ * Goal:          bugfix
+ * Description:   If you place the 'Course overview' block on the Dashboard, you will see that it is not presented equally to other blocks on the Dashboard. It lacks borders and it has a surplus line below the heading. This snippet fixes this glitch and presents the course overview block similar to the other Dashboard blocks.
+ * Creator:       Alexander Bias
+ * Tracker issue: MDL-85944
+ * Tested on:     Moodle 5.0, Firefox for Mac
+ *
+ * @copyright     2025 Alexander Bias, ssystems GmbH
+ * @author        Alexander Bias <abias@ssystems.de>
+ * @license       http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+#page-my-index .block_myoverview {
+    /* On the Dashboard, Moodle core removes the block's border with:
+        .drawers .block_myoverview { border: 0; }
+        We cannot revert that with CSS, but we can re-set the original value. */
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+
+    .card-body {
+        /* On the Dashboard, Moodle core removes the block's padding with:
+            .drawers .block_myoverview > .card-body { padding-top: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }
+            We cannot revert that with CSS, but we can re-set the original value. */
+        padding: 1rem !important;
+    }
+
+    .card-text > .block-myoverview > hr {
+        /* The block comes with a hardcoded hr element which is added below the heading.
+           On the dashboard, this looks odd. We just remove it there with CSS. */
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+/**
+ * Snippet Title: Maintenance pages with proper edges
+ * Scope:         global
+ * Goal:          bugfix
+ * Description:   The Moodle maintenance page layout (which is particularly used to present the Moodle database upgrade wizard) suffers from a layout bug that the content area does not have proper edges. This becomes visible as soon as the Moodle site uses a background image. This snippet fixes the issue by adding rounded corners and some paddings.
+ * Creator:       Alexander Bias
+ * Tracker issue: MDL-85915
+ * Tested on:     Moodle 5.0, Firefox for Mac
+ *
+ * @copyright     2025 Alexander Bias, ssystems GmbH
+ * @author        Alexander Bias <abias@ssystems.de>
+ * @license       http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+.pagelayout-maintenance {
+    .page-header-headings {
+        @extend .rounded-top;
+        @extend .px-4;
+    }
+
+    #region-main {
+        @extend .rounded-bottom;
+        @extend .px-4;
+        @extend .pb-4;
+    }
+}

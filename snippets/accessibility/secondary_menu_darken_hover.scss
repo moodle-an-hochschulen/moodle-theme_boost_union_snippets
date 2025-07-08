@@ -1,0 +1,17 @@
+/**
+ * Snippet Title: Darken hover background color in secondary menu items
+ * Scope:         global
+ * Goal:          accessibility
+ * Description:   Darken the background color of the secondary menu items while hovering to show more contrast agains other unselected menu items.
+ * Creator:       Heba Amer
+ * Tested on:     Moodle 5.0, Firefox for Mac
+ *
+ * @copyright  2024 The American University in Cairo
+ * @author     Heba Amer <heba.amer@aucegypt.edu>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+.secondary-navigation .moremenu .nav-link:hover,
+.secondary-navigation .moremenu .nav-link:focus {
+    background-color: $gray-400 !important;
+}

@@ -41,6 +41,7 @@ Each particular snippet should have a `Scope` tag and thereby be assigned to a s
 - `global`: These snippets affect the entire site
 - `course`: These snippets affect only the course context
 - `dashboard`: These snippets affect only the dashboard of a user
+- `sitehome`: These snippets affect only the site home page of site
 
 The list of scopes is not necessarily limited to these existing scopes, additional scopes can be added in the future.
 

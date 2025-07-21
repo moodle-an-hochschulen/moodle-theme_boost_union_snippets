@@ -1,0 +1,36 @@
+/**
+ * Snippet Title: Move course search box to top on site home
+ * Scope:         sitehome
+ * Goal:          easeofuse
+ * Description:   The course search box on site home is very important to many users. But when existing content on site home is very long, it is positioned quite unprominent. This snippet always puts the course search box on top on site home.
+ * Creator:       André Menrath
+ * Tested on:     Moodle 5.0, Firefox for Mac
+ * Usage note:    For this snippet to have any effect, the course search box has to be enabled in the frontpageloggedin site admin setting.
+ *
+ * @copyright     2025 University of Graz
+ * @author        André Menrath <andre.menrath@uni-graz.at>
+ * @license       http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/* Make all site home content a flex container. This allows us to order the elements inside the container. */
+#page-site-index #region-main > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+/* The course search box */
+#page-site-index #region-main > div > div.box:has(.simplesearchform) {
+    order: 1;
+}
+
+/* The course content*/
+#page-site-index #region-main > div > div.course-content {
+    order: 2;
+}
+
+/* All other stuff */
+#page-site-index #region-main > div > * {
+    order: 3;
+}

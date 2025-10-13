@@ -1,0 +1,49 @@
+/**
+ * Snippet Title: Accessible Link Colors
+ * Scope:         global
+ * Goal:          accessibility
+ * Description:   Makes most links across the site blue and underlined, and purple if visited. Includes activity links, but excludes section titles, buttons and other link controls across the site
+ * Creator:       Pierre Camaly de Brosses
+ * Tracker issue: <snippet tracker issue>
+ * Tested on:     Moodle 4.5, Firefox, Chrome and Safari
+ * Usage note:    None
+ *
+ * @copyright     2025 University of Exeter
+ * @author        Pierre Camaly de Brosses <p.de-brosses2@exeter.ac.uk>
+ * @license       http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+@mixin UI-elements {
+  &:not(
+    .dropdown a,
+    a.quickeditlink,
+    .btn a,
+    .btn,
+    h3 a,
+    .grid-section.card a,
+    .badge,
+    thead th a,
+    nav a
+  ) {
+    @content;
+  }
+}
+
+.pagelayout-incourse,
+.pagelayout-course {
+  #region-main {
+    a:link {
+      @include UI-elements {
+        color: #0070a8;
+        text-decoration: underline;
+      }
+    }
+    
+    a:visited {
+      @include UI-elements {
+        color: purple;
+        text-decoration: underline;
+      }
+    }
+  }
+}

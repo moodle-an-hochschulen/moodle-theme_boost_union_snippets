@@ -12,36 +12,36 @@
  */
 
 @mixin busnippet-accessiblelinks-uielements {
-  &:not(
-      .dropdown a,
-      a.quickeditlink,
-      .btn a,
-      .btn,
-      h3 a,
-      .grid-section.card a,
-      .badge,
-      thead th a,
-      nav a
-    ) {
-    @content;
-  }
+
+    &:not(.dropdown a,
+        a.quickeditlink,
+        .btn a,
+        .btn,
+        h3 a,
+        .grid-section.card a,
+        .badge,
+        thead th a,
+        nav a) {
+        @content;
+    }
 }
 
 .pagelayout-incourse,
 .pagelayout-course {
-  #region-main {
-    a:link {
-      @include busnippet-accessiblelinks-uielements {
-        color: #0070a8;
-        text-decoration: underline;
-      }
-    }
+    #region-main {
+        a:link {
+            @include busnippet-accessiblelinks-uielements {
+                color: #0070a8;
+                text-decoration: underline;
+            }
+        }
 
-    a:visited {
-      @include busnippet-accessiblelinks-uielements {
-        color: purple;
-        text-decoration: underline;
-      }
+        a:visited {
+            @include busnippet-accessiblelinks-uielements {
+                color: purple;
+                text-decoration: underline;
+            }
+        }
     }
-  }
 }
+

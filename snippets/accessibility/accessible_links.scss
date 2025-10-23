@@ -14,14 +14,14 @@
 @mixin busnippet-accessiblelinks-uielements {
 
     &:not(.dropdown a,
-        a.quickeditlink,
-        .btn a,
-        .btn,
-        h3 a,
-        .grid-section.card a,
-        .badge,
-        thead th a,
-        nav a) {
+a.quickeditlink,
+.btn a,
+.btn,
+h3 a,
+.grid-section.card a,
+.badge,
+thead th a,
+nav a) {
         @content;
     }
 }
@@ -44,4 +44,5 @@
         }
     }
 }
+
 

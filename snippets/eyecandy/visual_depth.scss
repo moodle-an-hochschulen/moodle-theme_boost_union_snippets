@@ -4,7 +4,7 @@
  * Goal:          eyecandy
  * Description:   A less flat design than the original Boost theme. Realized with box-shadows on a number of page elements and a colour gradient on the page background.
  * Creator:       Nils Promer
- * Tested on:     Moodle 5.0, Firefox for Mac
+ * Tested on:     Moodle 5.1, Firefox for Mac
  *
  * @copyright     2024 University of Applied Science Hamburg
  * @author        Nils Promer <nils.promer@haw-hamburg.de>
@@ -27,7 +27,8 @@ section.block {
     box-shadow: rgba(149, 157, 165, 0.15) 0 4px 6px;
 }
 
-.add_block_button a {
+.add_block_button a, /* For Moodle up to 5.0 */
+[data-region=add-block-button] a {  /* For Moodle 5.1 upwards */
     box-shadow: rgba(149, 157, 165, 0.15) 0 4px 6px;
 }
 

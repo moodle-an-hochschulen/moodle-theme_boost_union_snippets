@@ -1,0 +1,46 @@
+/**
+ * Snippet Title: Accessible Link Colors
+ * Scope:         course
+ * Goal:          accessibility
+ * Description:   Makes links inside course contents (inside text/media area and activity links for example) blue and underlined, and purple if visited. Also targets activity content that depend on courses. Excludes section titles, buttons and other link controls across the site
+ * Creator:       Pierre Camaly de Brosses
+ * Tested on:     Moodle 4.5, Firefox, Chrome and Safari
+ *
+ * @copyright     2025 University of Exeter
+ * @author        Pierre Camaly de Brosses <p.de-brosses2@exeter.ac.uk>
+ * @license       http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+@mixin busnippet-accessiblelinks-uielements {
+
+    &:not(.dropdown a,
+a.quickeditlink,
+.btn a,
+.btn,
+h3 a,
+.grid-section.card a,
+.badge,
+thead th a,
+nav a) {
+        @content;
+    }
+}
+
+.pagelayout-incourse,
+.pagelayout-course {
+    #region-main {
+        a:link {
+            @include busnippet-accessiblelinks-uielements {
+                color: #0070a8;
+                text-decoration: underline;
+            }
+        }
+
+        a:visited {
+            @include busnippet-accessiblelinks-uielements {
+                color: purple;
+                text-decoration: underline;
+            }
+        }
+    }
+}
